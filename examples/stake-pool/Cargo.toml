@@ -1,0 +1,12 @@
+[package]
+name = "stake-pool"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { workspace = true }
+stake-pool-parser = { workspace = true }
+toml = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+yellowstone-vixen = { workspace = true, features = ["prometheus"] }

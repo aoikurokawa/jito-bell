@@ -1,5 +1,5 @@
 [workspace]
-members = ["examples/token-program",
+members = [ "examples/stake-pool","examples/token-program",
     "jito-bell",
     "stake-pool-parser"
 ]
@@ -34,6 +34,7 @@ solana-sdk = "2.1.16"
 spl-stake-pool = { version = "2.0.1", features = ["no-entrypoint"] }
 spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
 spl-token-2022 = { version = "4.0.0", features = [ "no-entrypoint", "serde-traits" ] }
+stake-pool-parser = { path = "./stake-pool-parser", version = "0.1.0" }
 thiserror = "2.0.12"
 toml = "0.8.22"
 tokio = { version = "1.0.1", features = ["full"] }
