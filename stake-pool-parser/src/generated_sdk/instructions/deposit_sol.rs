@@ -122,9 +122,7 @@ impl Default for DepositSolInstructionData {
 
 #[derive(BorshSerialize, BorshDeserialize, Clone, Debug, Eq, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-pub struct DepositSolInstructionArgs {
-    pub arg: u64,
-}
+pub struct DepositSolInstructionArgs(u64);
 
 /// Instruction builder for `DepositSol`.
 ///
@@ -273,9 +271,8 @@ impl DepositSolBuilder {
                 "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
             )),
         };
-        let args = DepositSolInstructionArgs {
-            arg: self.arg.clone().expect("arg is not set"),
-        };
+        let arg = self.arg.clone().expect("arg is not set");
+        let args = DepositSolInstructionArgs(arg);
 
         accounts.instruction_with_remaining_accounts(args, &self.__remaining_accounts)
     }
@@ -632,9 +629,8 @@ impl<'a, 'b> DepositSolCpiBuilder<'a, 'b> {
         &self,
         signers_seeds: &[&[&[u8]]],
     ) -> solana_program::entrypoint::ProgramResult {
-        let args = DepositSolInstructionArgs {
-            arg: self.instruction.arg.clone().expect("arg is not set"),
-        };
+        let arg = self.instruction.arg.clone().expect("arg is not set");
+        let args = DepositSolInstructionArgs(arg);
         let instruction = DepositSolCpi {
             __program: self.instruction.__program,
 
