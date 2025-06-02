@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "defillama-rs",
     "examples/token-program",
     "jito-bell",
     "stake-pool-parser",
@@ -49,6 +50,7 @@ tracing = "0.1.41"
 tracing-appender = "0.2.3"
 tracing-subscriber = "0.3.19"
 twitterust = { path = "./twitterust" }
+url = "2.5.4"
 yellowstone-grpc-client = "2.0.0"
 yellowstone-grpc-proto = { version = "2.0.0", default-features = false }
 yellowstone-vixen = "0.3.0"

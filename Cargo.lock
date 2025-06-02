@@ -1251,6 +1251,18 @@ dependencies = [
 
 [[package]]
 name = "defillama-rs"
+version = "0.0.1"
+dependencies = [
+ "reqwest 0.11.27",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.12",
+ "tokio",
+ "url",
+]
+
+[[package]]
+name = "defillama-rs"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b5780089e9f33f1d5a681621bf9a524bf6bca844789a125714d1ef5e51e661c8"
@@ -2322,7 +2334,7 @@ dependencies = [
  "borsh 1.5.7",
  "chrono",
  "clap",
- "defillama-rs",
+ "defillama-rs 0.1.1",
  "dotenvy",
  "env_logger",
  "futures",

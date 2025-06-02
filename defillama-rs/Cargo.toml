@@ -1,0 +1,16 @@
+[package]
+name = "defillama-rs"
+version = "0.0.1"
+edition = "2021"
+description = "A Rust client for the DefiLlama API"
+license = "Apache-2.0"
+repository = "https://github.com/jito-foundation/jito-bell"
+readme = "README.md"
+
+[dependencies]
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+url = { workspace = true }
